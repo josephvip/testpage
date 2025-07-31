@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“智行空间”无人智能座舱 - 系统解决方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #020617; /* slate-950 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(ellipse at bottom, #1e293b 0%, #020617 100%);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.3); /* slate-800 with opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5); /* slate-700 with opacity */
+            border-radius: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(56, 189, 248, 0.6);
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem; /* text-4xl */
+            line-height: 1.2;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        .ai-tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: #7dd3fc; /* sky-300 */
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .feature-card {
+            background: #0f172a; /* slate-900 */
+            border: 1px solid #1e293b; /* slate-800 */
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: #38bdf8; /* sky-500 */
+        }
+        /* Lucide icons */
+        .lucide {
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke-width: 2;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/50 backdrop-blur-lg border-b border-slate-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">智行空间</h1>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#features" class="text-slate-300 hover:text-white transition-colors">核心功能</a>
+                <a href="#architecture" class="text-slate-300 hover:text-white transition-colors">系统架构</a>
+                <a href="#privacy" class="text-slate-300 hover:text-white transition-colors">隐私安全</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-5 rounded-lg transition-colors">联系我们</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg pt-32 pb-20 md:pt-48 md:pb-32 text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4">
+                    “智行空间”智能座舱<br><span class="gradient-text">系统解决方案</span>
+                </h2>
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+                    以端侧AI为核心，将无人Taxi从运输工具升级为高度智能、个性化的私人移动空间，构建下一代出行服务的核心竞争力。
+                </p>
+                <a href="#features" class="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-sky-500/20">
+                    探索方案详情
+                </a>
+            </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section id="features" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="section-title text-white">三大维度，重塑座舱体验</h3>
+                    <p class="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">我们从用户的核心需求出发，通过端侧AI赋能，打造前所未有的座舱体验。</p>
+                </div>
+
+                <!-- Dimension 1: Safety & Trust -->
+                <div class="mb-20">
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 rounded-xl bg-red-500/10 mr-4"><i data-lucide="shield-check" class="text-red-400 w-8 h-8"></i></div>
+                        <h4 class="text-3xl font-bold text-white">极致安全感与信任感</h4>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“这辆车能看到什么？它值得信任吗？”</p>
+                            <h5 class="font-bold text-white mb-2">驾驶行为透明化系统</h5>
+                            <p class="text-slate-400 text-sm mb-4">实时渲染3D“上帝视角”，标记车辆行人，播报关键决策，建立乘客信任。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时感知与决策可视化</div>
+                        </div>
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“如果我在车里遇到危险怎么办？”</p>
+                            <h5 class="font-bold text-white mb-2">舱内生命体征与异常事件监测</h5>
+                            <p class="text-slate-400 text-sm mb-4">非接触式监测心率，识别异常事件（如哭喊），主动连接远程客服。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：多模态融合与异常检测</div>
+                        </div>
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“下车时忘了东西怎么办？”</p>
+                            <h5 class="font-bold text-white mb-2">智能遗留物检测系统</h5>
+                            <p class="text-slate-400 text-sm mb-4">乘客下车后自动扫描，比对图像，发现遗留物立即通过App提醒。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：端侧视觉分析与比对</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dimension 2: Comfort & Personalization -->
+                <div class="mb-20">
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 rounded-xl bg-green-500/10 mr-4"><i data-lucide="user-check" class="text-green-400 w-8 h-8"></i></div>
+                        <h4 class="text-3xl font-bold text-white">超个性化的舒适体验</h4>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“我希望车内环境永远是我最喜欢的样子。”</p>
+                            <h5 class="font-bold text-white mb-2">“用户记忆”云端同步与本地预设</h5>
+                            <p class="text-slate-400 text-sm mb-4">人脸识别后，自动将温度、座椅、灯光、音乐调整至乘客偏好状态。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：身份识别与场景快速加载</div>
+                        </div>
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“我准备去健身房，希望车里能更有活力。”</p>
+                            <h5 class="font-bold text-white mb-2">动态情景智能调节</h5>
+                            <p class="text-slate-400 text-sm mb-4">根据目的地、时间、天气，主动推荐“活力模式”或“舒缓模式”。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：意图预测与多维数据融合</div>
+                        </div>
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“我感觉有点累，想在路上小睡一会儿。”</p>
+                            <h5 class="font-bold text-white mb-2">生理状态感知与主动服务</h5>
+                            <p class="text-slate-400 text-sm mb-4">监测到疲劳状态，主动调暗灯光、释放助眠香氛，实现无声关怀。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：非侵入式生理感知与主动决策</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dimension 3: Productivity & Entertainment -->
+                <div>
+                    <div class="flex items-center mb-8">
+                        <div class="p-3 rounded-xl bg-blue-500/10 mr-4"><i data-lucide="layout-grid" class="text-blue-400 w-8 h-8"></i></div>
+                        <h4 class="text-3xl font-bold text-white">高效利用与沉浸娱乐</h4>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“我需要在路上开一个重要的视频会议。”</p>
+                            <h5 class="font-bold text-white mb-2">“移动办公室”模式与隐私声场</h5>
+                            <p class="text-slate-400 text-sm mb-4">通过AI算法增强人声、抵消外泄声音，构建私密的“声音气泡”，确保会议内容不泄露。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时音频处理与声场控制</div>
+                        </div>
+                        <div class="feature-card">
+                            <p class="font-semibold text-slate-300 italic mb-4">“我是一个游客，想了解沿途的风景。”</p>
+                            <h5 class="font-bold text-white mb-2">AR增强现实城市导览</h5>
+                            <p class="text-slate-400 text-sm mb-4">侧车窗变为信息屏，实时叠加显示地标信息，并通过手势交互，让旅途变探索。</p>
+                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时SLAM与视觉识别</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture Section -->
+        <section id="architecture" class="py-20 md:py-28 bg-slate-900/70">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="section-title text-white">端侧AI系统架构</h3>
+                    <p class="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">深度整合的软硬件平台，是实现一切体验的坚实底座。</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Hardware -->
+                    <div class="space-y-6">
+                        <h4 class="text-2xl font-bold text-white flex items-center"><i data-lucide="hard-drive" class="text-sky-400 mr-3"></i>硬件平台</h4>
+                        <div class="glass-card p-6"><strong>中央计算单元:</strong> >100 TOPS AI算力的AiBox</div>
+                        <div class="glass-card p-6"><strong>传感器套件:</strong> 融合舱内外摄像头、毫米波雷达、麦克风阵列</div>
+                        <div class="glass-card p-6"><strong>人机交互硬件:</strong> 4K透明OLED屏、12声道音响、智能照明等</div>
+                    </div>
+                    <!-- Software Stack -->
+                    <div class="space-y-2">
+                        <h4 class="text-2xl font-bold text-white mb-4 flex items-center"><i data-lucide="layers" class="text-sky-400 mr-3"></i>软件平台架构</h4>
+                        <div class="bg-violet-500/20 text-violet-300 p-4 rounded-lg text-center font-bold">应用层 (Applications)</div>
+                        <div class="text-center text-slate-500">↓</div>
+                        <div class="bg-sky-500/20 text-sky-300 p-4 rounded-lg text-center font-bold">中间件 (Middleware)</div>
+                        <div class="text-center text-slate-500">↓</div>
+                        <div class="bg-indigo-500/20 text-indigo-300 p-4 rounded-lg text-center font-bold">核心AI引擎 (Core AI Engines)</div>
+                        <div class="text-center text-slate-500">↓</div>
+                        <div class="bg-slate-500/20 text-slate-300 p-4 rounded-lg text-center font-bold">硬件抽象层 & OS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="section-title text-white">设计根基：<span class="gradient-text">绝对的隐私安全</span></h3>
+                    <p class="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">我们深知隐私的重要性。所有设计都遵循最严格的隐私保护原则。</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
+                    <div class="glass-card p-8">
+                        <i data-lucide="server-off" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">端侧优先，默认不上传</h4>
+                        <p class="mt-2 text-slate-400">所有原始传感器数据均在车端处理，物理上保障数据安全。</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i data-lucide="lock" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">授权上传，全程加密</h4>
+                        <p class="mt-2 text-slate-400">仅在紧急情况或用户授权下，才会上传加密数据片段。</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i data-lucide="share-2" class="w-12 h-12 mx-auto text-sky-400 mb-4"></i>
+                        <h4 class="text-xl font-bold text-white">联邦学习，模型共进</h4>
+                        <p class="mt-2 text-slate-400">采用联邦学习框架，在保护原始数据隐私前提下，实现模型迭代优化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-28 bg-slate-900">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="section-title gradient-text mb-4">共创出行未来</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg mb-8">
+                    我们正在寻找志同道合的汽车制造商、出行服务商与投资者，共同开启“出行即服务”(MaaS)的全新篇章。
+                </p>
+                <a href="mailto:contact@zhixing.space" class="bg-gradient-to-r from-sky-500 to-violet-500 hover:from-sky-600 hover:to-violet-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-sky-500/20">
+                    立即联系我们
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <p>&copy; 2025 智行空间科技有限公司. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
