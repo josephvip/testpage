@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>“智行空间”无人智能座舱 - 系统解决方案</title>
+    <title>“智行空间”无人Taxi智能座舱 - 系统解决方案</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background-color: #020617; /* slate-950 */
@@ -58,9 +61,15 @@
             border-radius: 1rem;
             padding: 1.5rem;
             transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         .feature-card:hover {
             border-color: #38bdf8; /* sky-500 */
+        }
+        .feature-card-content {
+            flex-grow: 1;
         }
         /* Lucide icons */
         .lucide {
@@ -81,6 +90,7 @@
             <h1 class="text-2xl font-bold gradient-text">智行空间</h1>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#features" class="text-slate-300 hover:text-white transition-colors">核心功能</a>
+                <a href="#accessibility" class="text-slate-300 hover:text-white transition-colors">人文关怀</a>
                 <a href="#architecture" class="text-slate-300 hover:text-white transition-colors">系统架构</a>
                 <a href="#privacy" class="text-slate-300 hover:text-white transition-colors">隐私安全</a>
                 <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-5 rounded-lg transition-colors">联系我们</a>
@@ -123,22 +133,28 @@
                     </div>
                     <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“这辆车能看到什么？它值得信任吗？”</p>
-                            <h5 class="font-bold text-white mb-2">驾驶行为透明化系统</h5>
-                            <p class="text-slate-400 text-sm mb-4">实时渲染3D“上帝视角”，标记车辆行人，播报关键决策，建立乘客信任。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时感知与决策可视化</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“这辆车能看到什么？它值得信任吗？”</p>
+                                <h5 class="font-bold text-white mb-2">驾驶行为透明化系统</h5>
+                                <p class="text-slate-400 text-sm mb-4">实时渲染3D“上帝视角”，标记车辆行人，播报关键决策，建立乘客信任。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：实时感知与决策可视化</div>
                         </div>
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“如果我在车里遇到危险怎么办？”</p>
-                            <h5 class="font-bold text-white mb-2">舱内生命体征与异常事件监测</h5>
-                            <p class="text-slate-400 text-sm mb-4">非接触式监测心率，识别异常事件（如哭喊），主动连接远程客服。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：多模态融合与异常检测</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“如果我在车里遇到危险怎么办？”</p>
+                                <h5 class="font-bold text-white mb-2">舱内生命体征与异常事件监测</h5>
+                                <p class="text-slate-400 text-sm mb-4">非接触式监测心率，识别异常事件（如哭喊），主动连接远程客服。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：多模态融合与异常检测</div>
                         </div>
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“下车时忘了东西怎么办？”</p>
-                            <h5 class="font-bold text-white mb-2">智能遗留物检测系统</h5>
-                            <p class="text-slate-400 text-sm mb-4">乘客下车后自动扫描，比对图像，发现遗留物立即通过App提醒。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：端侧视觉分析与比对</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“下车时忘了东西怎么办？”</p>
+                                <h5 class="font-bold text-white mb-2">智能遗留物检测系统</h5>
+                                <p class="text-slate-400 text-sm mb-4">乘客下车后自动扫描，比对图像，发现遗留物立即通过App提醒。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：端侧视觉分析与比对</div>
                         </div>
                     </div>
                 </div>
@@ -151,22 +167,28 @@
                     </div>
                     <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“我希望车内环境永远是我最喜欢的样子。”</p>
-                            <h5 class="font-bold text-white mb-2">“用户记忆”云端同步与本地预设</h5>
-                            <p class="text-slate-400 text-sm mb-4">人脸识别后，自动将温度、座椅、灯光、音乐调整至乘客偏好状态。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：身份识别与场景快速加载</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“我希望车内环境永远是我最喜欢的样子。”</p>
+                                <h5 class="font-bold text-white mb-2">“用户记忆”云端同步与本地预设</h5>
+                                <p class="text-slate-400 text-sm mb-4">人脸识别后，自动将温度、座椅、灯光、音乐调整至乘客偏好状态。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：身份识别与场景快速加载</div>
                         </div>
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“我准备去健身房，希望车里能更有活力。”</p>
-                            <h5 class="font-bold text-white mb-2">动态情景智能调节</h5>
-                            <p class="text-slate-400 text-sm mb-4">根据目的地、时间、天气，主动推荐“活力模式”或“舒缓模式”。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：意图预测与多维数据融合</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“我准备去健身房，希望车里能更有活力。”</p>
+                                <h5 class="font-bold text-white mb-2">动态情景智能调节</h5>
+                                <p class="text-slate-400 text-sm mb-4">根据目的地、时间、天气，主动推荐“活力模式”或“舒缓模式”。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：意图预测与多维数据融合</div>
                         </div>
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“我感觉有点累，想在路上小睡一会儿。”</p>
-                            <h5 class="font-bold text-white mb-2">生理状态感知与主动服务</h5>
-                            <p class="text-slate-400 text-sm mb-4">监测到疲劳状态，主动调暗灯光、释放助眠香氛，实现无声关怀。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：非侵入式生理感知与主动决策</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“我感觉有点累，想在路上小睡一会儿。”</p>
+                                <h5 class="font-bold text-white mb-2">生理状态感知与主动服务</h5>
+                                <p class="text-slate-400 text-sm mb-4">监测到疲劳状态，主动调暗灯光、释放助眠香氛，实现无声关怀。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：非侵入式生理感知与主动决策</div>
                         </div>
                     </div>
                 </div>
@@ -179,24 +201,82 @@
                     </div>
                     <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“我需要在路上开一个重要的视频会议。”</p>
-                            <h5 class="font-bold text-white mb-2">“移动办公室”模式与隐私声场</h5>
-                            <p class="text-slate-400 text-sm mb-4">通过AI算法增强人声、抵消外泄声音，构建私密的“声音气泡”，确保会议内容不泄露。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时音频处理与声场控制</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“我需要在路上开一个重要的视频会议。”</p>
+                                <h5 class="font-bold text-white mb-2">“移动办公室”模式与隐私声场</h5>
+                                <p class="text-slate-400 text-sm mb-4">通过AI算法增强人声、抵消外泄声音，构建私密的“声音气泡”，确保会议内容不泄露。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：实时音频处理与声场控制</div>
                         </div>
                         <div class="feature-card">
-                            <p class="font-semibold text-slate-300 italic mb-4">“我是一个游客，想了解沿途的风景。”</p>
-                            <h5 class="font-bold text-white mb-2">AR增强现实城市导览</h5>
-                            <p class="text-slate-400 text-sm mb-4">侧车窗变为信息屏，实时叠加显示地标信息，并通过手势交互，让旅途变探索。</p>
-                            <div class="tag ai-tag"><i data-lucide="cpu"></i>端侧AI作用：实时SLAM与视觉识别</div>
+                            <div class="feature-card-content">
+                                <p class="font-semibold text-slate-300 italic mb-4">“我是一个游客，想了解沿途的风景。”</p>
+                                <h5 class="font-bold text-white mb-2">AR增强现实城市导览</h5>
+                                <p class="text-slate-400 text-sm mb-4">侧车窗变为信息屏，实时叠加显示地标信息，并通过手势交互，让旅途变探索。</p>
+                            </div>
+                            <div class="tag ai-tag mt-4"><i data-lucide="cpu"></i>端侧AI作用：实时SLAM与视觉识别</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- NEW: Accessibility & Care Section -->
+        <section id="accessibility" class="py-20 md:py-28 bg-slate-900/70">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="section-title text-white">为每一位乘客设计：<span class="gradient-text">无差别的关怀</span></h3>
+                    <p class="text-slate-400 mt-4 text-lg max-w-3xl mx-auto">我们关注多样化的出行需求，从行动不便者到携带儿童或宠物的家庭，致力于提供周到、便捷、高品质的服务。</p>
+                </div>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 flex flex-col">
+                        <div class="flex-grow">
+                            <div class="flex justify-center mb-4"><i data-lucide="accessibility" class="w-12 h-12 text-violet-400"></i></div>
+                            <h4 class="text-xl font-bold text-white text-center mb-2">无障碍出行</h4>
+                            <p class="text-slate-400 text-sm text-center">为老人和残障人士提供主动式辅助，简化操作，保障安全。</p>
+                            <ul class="text-left mt-4 space-y-2 text-slate-300 text-sm">
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 轮椅识别与自动坡道</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 大字体/高对比度关怀模式</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 全程语音控制与读屏功能</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 上下车异常姿态（如摔倒）监测</li>
+                            </ul>
+                        </div>
+                        <div class="tag ai-tag mt-4 text-center block"><i data-lucide="cpu"></i>端侧AI作用：视觉识别与行为意图分析</div>
+                    </div>
+                    <div class="glass-card p-8 flex flex-col">
+                        <div class="flex-grow">
+                            <div class="flex justify-center mb-4"><i data-lucide="baby" class="w-12 h-12 text-amber-400 inline-block"></i><i data-lucide="cat" class="w-12 h-12 text-amber-400 inline-block"></i></div>
+                            <h4 class="text-xl font-bold text-white text-center mb-2">儿童与宠物友好</h4>
+                            <p class="text-slate-400 text-sm text-center">自动识别儿童或宠物，开启专属模式，让家人更安心。</p>
+                            <ul class="text-left mt-4 space-y-2 text-slate-300 text-sm">
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 儿童/安全座椅识别与自动落锁</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 专属儿童娱乐与AR互动内容</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 宠物模式（特殊通风与保护）</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 家长远程座舱监控（需授权）</li>
+                            </ul>
+                        </div>
+                        <div class="tag ai-tag mt-4 text-center block"><i data-lucide="cpu"></i>端侧AI作用：特定对象识别与场景切换</div>
+                    </div>
+                    <div class="glass-card p-8 flex flex-col">
+                        <div class="flex-grow">
+                            <div class="flex justify-center mb-4"><i data-lucide="sparkles" class="w-12 h-12 text-cyan-400"></i></div>
+                            <h4 class="text-xl font-bold text-white text-center mb-2">全时段自清洁系统</h4>
+                            <p class="text-slate-400 text-sm text-center">时刻保持座舱洁净如新，为每位乘客提供最安心的乘坐环境。</p>
+                            <ul class="text-left mt-4 space-y-2 text-slate-300 text-sm">
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 乘客离车后污渍/遗洒自动检测</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 自动触发紫外线（UV-C）深度消毒</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 智能空气净化与循环</li>
+                                <li><i data-lucide="check-circle" class="text-green-400"></i> 向下位乘客展示“已消毒”认证</li>
+                            </ul>
+                        </div>
+                        <div class="tag ai-tag mt-4 text-center block"><i data-lucide="cpu"></i>端侧AI作用：图像分析与自动化流程触发</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- System Architecture Section -->
-        <section id="architecture" class="py-20 md:py-28 bg-slate-900/70">
+        <section id="architecture" class="py-20 md:py-28">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h3 class="section-title text-white">端侧AI系统架构</h3>
@@ -206,7 +286,7 @@
                     <!-- Hardware -->
                     <div class="space-y-6">
                         <h4 class="text-2xl font-bold text-white flex items-center"><i data-lucide="hard-drive" class="text-sky-400 mr-3"></i>硬件平台</h4>
-                        <div class="glass-card p-6"><strong>中央计算单元:</strong> >100 TOPS AI算力的AiBox</div>
+                        <div class="glass-card p-6"><strong>中央计算单元:</strong> >100 TOPS AI算力的车规级可扩展SoC</div>
                         <div class="glass-card p-6"><strong>传感器套件:</strong> 融合舱内外摄像头、毫米波雷达、麦克风阵列</div>
                         <div class="glass-card p-6"><strong>人机交互硬件:</strong> 4K透明OLED屏、12声道音响、智能照明等</div>
                     </div>
@@ -226,7 +306,7 @@
         </section>
 
         <!-- Privacy Section -->
-        <section id="privacy" class="py-20 md:py-28">
+        <section id="privacy" class="py-20 md:py-28 bg-slate-900/70">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h3 class="section-title text-white">设计根基：<span class="gradient-text">绝对的隐私安全</span></h3>
